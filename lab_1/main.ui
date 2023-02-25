@@ -127,6 +127,9 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="text">
      <string>ADD</string>
     </property>
@@ -178,6 +181,9 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="text">
      <string>DELETE</string>
     </property>
@@ -196,6 +202,9 @@
       <family>Eras Bold ITC</family>
       <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="toolTip">
      <string>fff</string>
@@ -232,6 +241,9 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="text">
      <string>CHANGE</string>
     </property>
@@ -250,6 +262,9 @@
       <family>Eras Bold ITC</family>
       <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="text">
      <string>ANSWER</string>
@@ -270,6 +285,9 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="text">
      <string>PRINT</string>
     </property>
@@ -288,6 +306,9 @@
       <family>Eras Bold ITC</family>
       <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="text">
      <string>CLEAN</string>
