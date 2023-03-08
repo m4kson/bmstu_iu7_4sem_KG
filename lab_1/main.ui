@@ -59,12 +59,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QTreeWidget" name="setA">
-        <column>
-         <property name="text">
-          <string>№</string>
-         </property>
-        </column>
+       <widget class="QTableWidget" name="tableWidget">
         <column>
          <property name="text">
           <string>X</string>
@@ -91,18 +86,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QTreeWidget" name="setB">
-        <property name="statusTip">
-         <string/>
-        </property>
-        <property name="whatsThis">
-         <string>fgh</string>
-        </property>
-        <column>
-         <property name="text">
-          <string>№</string>
-         </property>
-        </column>
+       <widget class="QTableWidget" name="tableWidget_2">
         <column>
          <property name="text">
           <string>X</string>
