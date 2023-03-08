@@ -361,32 +361,7 @@ def show_info():
     info.setStandardButtons(QMessageBox.Ok)
     info.exec_()
 
-# def addPoint(ui, point_arr_A, point_arr_B):
-#     x = ui.add_x_spinbox.value()
-#     y = ui.add_y_spinbox.value()
-#
-#     flag = False
-#     if ui.choose_set.currentText() == "set A":
-#         for point in point_arr_A:
-#             if point.is_equal(x, y):
-#                 flag = True
-#                 break
-#     elif ui.choose_set.currentText() == "set B":
-#         for point in point_arr_B:
-#             if point.is_equal(x, y):
-#                 flag = True
-#                 break
-#     if not flag:
-#         if ui.choose_set.currentText() == "set A":
-#             point_arr_A.append(Point(x, y))
-#             ui.tableWidget.setItem(len(point_arr_A), 0, QtableWidgetItem(x))
-#
-#         elif self.choose_set.currentText() == "set B":
-#             point_arr_B.append(Point(x, y))
-#             item = QtWidgets.QTreeWidgetItem(self.setB)
-#             item.setText(0, str(len(point_arr_B)))
-#             item.setText(1, str(x))
-#             item.setText(2, str(y))
+
 
 if __name__ == "__main__":
     import sys
