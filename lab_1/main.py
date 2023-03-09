@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox, QTableWidgetItem
 from class_point import Point
+from triangle import *
 
 set_A = []
 set_B = []
@@ -226,6 +227,8 @@ class Ui_MainWindow(object):
         self.add_btn.clicked.connect(lambda : self.addPoint(set_A, set_B))
         self.delete_btn.clicked.connect(lambda : self.deletePoint(set_A, set_B))
         self.change_btn.clicked.connect(lambda : self.changePoint(set_A, set_B))
+        self.answer_btn.clicked.connect(lambda : self.print_ans(set_A, set_B))
+        self.clean_btn.clicked.connect(lambda : self.clear_all(set_A, set_B))
 
     #my funcs
 
@@ -310,6 +313,34 @@ class Ui_MainWindow(object):
             self.tableWidget_2.setItem(num - 1, 0, QTableWidgetItem(str(x)))
             self.tableWidget_2.setItem(num - 1, 1, QTableWidgetItem(str(y)))
 
+    def print_ans(self, setA, setB):
+        if len(setA) < 3 or len(setB) < 3:
+            info = QMessageBox()
+            info.setWindowTitle("error")
+            info.setText("Can't find answer, not enough data, enter more dots!!!")
+            info.setStandardButtons(QMessageBox.Ok)
+            info.exec_()
+            return
+
+        ans = find_ans(set_A, set_B)
+        answindow = QMessageBox()
+        answindow.setWindowTitle("answer")
+        answindow.setText("Наибольший угол с осью абсцисс образует прямая, пересекающая вершины при тупых углах треугольников А(({}, {}), ({}, {}), ({}, {}) и В(({}, {}), ({}, {}), ({}, {}).".format(ans[0].A.x, ans[0].A.y, ans[0].B.x, ans[0].B.y, ans[0].C.x, ans[0].C.y, ans[1].A.x, ans[1].A.y, ans[1].B.x, ans[1].B.y, ans[1].C.x, ans[1].C.y))
+        answindow.setStandardButtons(QMessageBox.Ok)
+        answindow.exec_()
+
+    def clear_all(self, setA, setB):
+        for i in range(len(setA), -1, -1):
+            self.tableWidget.removeRow(i)
+        for i in range(len(setB), -1, -1):
+            self.tableWidget_2.removeRow(i)
+        setA.clear()
+        setB.clear()
+
+        #todo clear graph window
+
+
+    #my funcs end
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
